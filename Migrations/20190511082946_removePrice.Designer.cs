@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VulnerableApplication.Models;
 
 namespace VulnerableApplication.Migrations
 {
     [DbContext(typeof(VulnerableApplicationContext))]
-    partial class VulnerableApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20190511082946_removePrice")]
+    partial class removePrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -10,6 +10,7 @@ using VulnerableApplication.Models;
 
 namespace VulnerableApplication.Pages.Movies
 {
+    [IgnoreAntiforgeryToken(Order = 1001)]
     public class EditModel : PageModel
     {
         private readonly VulnerableApplication.Models.VulnerableApplicationContext _context;

@@ -1,6 +1,5 @@
 ﻿@page
 @model VulnerableApplication.Pages.Movies.IndexModel
-
 @{
     ViewData["Title"] = "Index";
 }
@@ -32,9 +31,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Movie[0].Genre)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Movie[0].Price)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Movie[0].Rating)
             </th>
@@ -42,10 +41,10 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Movie) {
+        @foreach (var item in Model.Movie) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.Raw(item.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
@@ -53,9 +52,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Price)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
