@@ -28,7 +28,7 @@ namespace VulnerableApplication.Pages.Movies
             }
 
             var sql = $"SELECT * from dbo.Movie Where ID = {id}";
-            Movie = await _context.Movie.FromSql(sql).FirstOrDefaultAsync();
+            Movie = await _context.Movie.FromSqlRaw(sql).FirstOrDefaultAsync();
 
             if (Movie == null)
             {
